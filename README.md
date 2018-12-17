@@ -1,7 +1,7 @@
 runPredictor is a python application which states which times would be best to run in a given day based on parameters set by the user.
 
 It scrapes table data from https://weather.com/.
-![picture](img2.jpeg)
+![picture](img2.PNG)
 
 The output is formatted like this:
 ![picture](img1.png)
