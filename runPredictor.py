@@ -1,7 +1,6 @@
 #Program written by William Aderholdt, started on December 16, 2018.
 
 import requests
-import json
 import os
 from bs4 import BeautifulSoup
 
