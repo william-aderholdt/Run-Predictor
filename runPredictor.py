@@ -2,7 +2,10 @@
 
 import requests
 import json
+import os
 from bs4 import BeautifulSoup
+
+os.system('cls')
 
 #Settings:
 url = 'https://weather.com/weather/hourbyhour/l/58104:4:US'
@@ -48,10 +51,6 @@ for row in rows:
 
     data.append(d)
     
-with open('weather.json', 'w') as f:
-    json.dump(data, f)
-#Writes data array into a json file named weather.json.
-
 
 
 '''
