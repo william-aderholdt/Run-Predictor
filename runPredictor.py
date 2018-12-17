@@ -72,8 +72,10 @@ times, then prints to command line the rows which met the criteria of the settin
 '''
 if not opt: 
     print('There are no optimal times to run for today.')
-else:
+elif len(opt) > 1:
     print('The following are the optimal times for you to run today:')
+else:
+    print('The following is the optimal timee for you to run today:')
 
 for j in opt:
     print("At %s, it will be %s degrees outside, and feel like it is %s degrees. There is a %s percent chance "
