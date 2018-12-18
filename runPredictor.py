@@ -46,7 +46,7 @@ for row in rows:
     d['feels'] = d['feels'][0:2]
     d['precip'] = d['precip'][:-1]
     d['wind'] = d['wind'][-6:-4].replace(' ', '')
-    #removes everything but the numbers for each.
+    #Removes everything but the numbers for each.
 
     data.append(d)
     
