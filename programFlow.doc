@@ -1,0 +1,24 @@
+This is a step through of the processes needed to complete the program.
+
+Project description: This project will use information from weather.com to notify user of optimal run times for that day.
+
+1. Need a Main Function.
+
+2. Obtain settings from file (.txt).
+    -Read .txt file 
+    -Stored information in a list.
+    -Need to change the application path to automatically fill in the executive path.
+
+3. Web Scrape Based on Settings.
+    -Weather.com
+    -Locate location of information.
+
+4. Create Objects from Web Scrape.
+    -Classes/Objects.
+    -Attributes: Time, Temp, Wind, Precip.
+
+5. Algorithm to check if objects meet parameters defined.
+    -If/Then Statements
+
+6. Present objects which meet parameters to user.
+    -Print Statements.
