@@ -11,7 +11,7 @@ namespace runPredictor
         static void Main(string[] args)
         {
             string[] userSettings = System.IO.File.ReadAllLines(@"C:\Users\David\Documents\projects\runPredictor\settings.txt");
-            foreach(var item in userSettings) //remove later
+            foreach (var item in userSettings) //remove later
             {
                 Console.WriteLine(item.ToString());
             }
