@@ -1,4 +1,4 @@
-Zipcode:58104
+Zipcode:92130
 Hours:1
 TempMax:80
 TempMin:25
