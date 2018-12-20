@@ -1,6 +1,0 @@
-zip code:58104
-# of hours: 1
-temp min:
-temp max:
-wind max:
-precip max:
