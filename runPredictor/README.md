@@ -8,4 +8,5 @@ It scrapes table data from https://weather.com/.
 
 The current version is a command line program C#.  To run:
     1. Change the settings in the settings.txt file to your liking.
-    2. Compile and run program.
+    2. On line 21 of Settings.cs, the path needs to be changed to where your settings.txt is located.
+    3. Compile and run program.
