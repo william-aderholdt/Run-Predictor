@@ -18,5 +18,6 @@ F:\projects\Run-Predictor\bin\Debug\runPredictor.exe.config
 F:\projects\Run-Predictor\bin\Debug\runPredictor.exe
 F:\projects\Run-Predictor\bin\Debug\runPredictor.pdb
 F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.xml
-F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.CssSelectors.pdb
 F:\projects\Run-Predictor\obj\Debug\runPredictor.csproj.CopyComplete
+F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.dll
+F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.pdb

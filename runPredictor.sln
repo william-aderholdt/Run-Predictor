@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runPredictor", "runPredictor\runPredictor.csproj", "{A8AE981E-7616-4083-8E13-835ADC593741}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "runPredictor", "runPredictor.csproj", "{A8AE981E-7616-4083-8E13-835ADC593741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FC7FCBD3-6C8B-494E-BA37-DDA6DA3AFCCF}
+		SolutionGuid = {077FD9D7-1456-4B10-B244-925E9DB4BAA8}
 	EndGlobalSection
 EndGlobal

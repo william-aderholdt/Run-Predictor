@@ -11,77 +11,76 @@ namespace runPredictor
     {
         public static void Main(string[] args)
         {
-            List<WeatherCardClass> weatherCardList = new List<WeatherCardClass>();
-            Settings userSettings = new Settings();
+            List<WeatherCardClass> lWeatherCardList = new List<WeatherCardClass>();
+            Settings lUserSettings = new Settings();
+            WebScrape lWebscrapeData = new WebScrape(ref lUserSettings);
 
-            WebScrapeWeather(userSettings, weatherCardList); 
-            BestRunTimes(userSettings, weatherCardList);
-            PrintBestTimes(userSettings, weatherCardList);
+            MakeWeatherCards(ref lUserSettings, ref lWeatherCardList, ref lWebscrapeData); //need to make something to store the data
+            BestRunTimes(ref lUserSettings, ref lWeatherCardList);
+            PrintBestTimes(ref lUserSettings, ref lWeatherCardList);
             
         }
 
-        static List<WeatherCardClass> WebScrapeWeather(Settings userSettings, List<WeatherCardClass> weatherCardList)
-            //Function to scrape information from website and store in objects for later use.
+
+        /*
+          Function makes the objects to store weather information for each point in time using information from the user settings and the
+          previously web scraped data.
+
+          For Loop: Iterates through every row of data captured from weather.com's hour-by-hour forecast. Adds weather card to the list for later
+          retrieval.
+
+          Return: Returns the list of weather cards created.
+        */
+        private static List<WeatherCardClass> MakeWeatherCards(ref Settings lUserSettings, ref List<WeatherCardClass> lWeatherCardList,
+                                                                ref WebScrape lWebscrapeData)
+
         {
-            HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();
-            HtmlAgilityPack.HtmlDocument doc = web.Load("https://weather.com/weather/hourbyhour/l/" + userSettings.ZipCode + ":4:US"); 
-            //Captures all html from the website at the url.
 
-            var timeData = doc.DocumentNode.SelectNodes("//div[@class='hourly-time']");
-            var tempData = doc.DocumentNode.SelectNodes("//td[@class='temp']");
-            var feelData = doc.DocumentNode.SelectNodes("//td[@class='feels']");
-            var precipData = doc.DocumentNode.SelectNodes("//td[@class='precip']");
-            var windData = doc.DocumentNode.SelectNodes("//td[@class='wind']");
-            var locationData = doc.DocumentNode.SelectNodes("//div[@class='locations-title hourly-page-title']/h1");
-
-            userSettings.Location = locationData[0].InnerText.Substring(0, locationData[0].InnerText.Length - 15);
-            //Adds location to the userSettings object.
-
-            int i = 0;
-            while (i < timeData.Count)
+            for (int lTimeDataIndex = 0; lTimeDataIndex < lWebscrapeData.TimeData.Count(); ++lTimeDataIndex)
             {
-                WeatherCardClass weatherCard = new WeatherCardClass(timeData[i], tempData[i], feelData[i], precipData[i], windData[i]);
-                //Creates objects for each row in the table.
+                WeatherCardClass weatherCard = new WeatherCardClass(lWebscrapeData.TimeData[lTimeDataIndex], lWebscrapeData.TempData[lTimeDataIndex],
+                                                                    lWebscrapeData.FeelData[lTimeDataIndex], lWebscrapeData.PrecipData[lTimeDataIndex], 
+                                                                    lWebscrapeData.WindData[lTimeDataIndex]);
+                lWeatherCardList.Add(weatherCard);
 
-                weatherCardList.Add(weatherCard);
-                //Creates a list of the objects.
+            };
 
-                i++;
-
-            }
-
-            return weatherCardList;
+            return lWeatherCardList;
             
 
         }
 
-        static List<WeatherCardClass> BestRunTimes(Settings userSettings, List<WeatherCardClass> weatherCardList)
-            //Function to determine which times would be the best to run in.
+        /*
+          Function to determine which times would be the best to run in.  Uses an if statement to compare times weather attributes.
+        */
+        static void BestRunTimes(ref Settings lUserSettings, ref List<WeatherCardClass> lWeatherCardList)
+
         {
-            foreach (var weatherCard in weatherCardList)
+            foreach (var weatherCard in lWeatherCardList)
             {
-                if (weatherCard.Temp > userSettings.TempMax ||
-                    weatherCard.Temp < userSettings.TempMin ||
-                    weatherCard.Wind > userSettings.WindMax ||
-                    weatherCard.Precip > userSettings.PrecipMax)
-                    //Algoithim to check weather data against user's settings.
+                if (weatherCard.WeatherCardTemp > lUserSettings.TempMax ||
+                    weatherCard.WeatherCardTemp < lUserSettings.TempMin ||
+                    weatherCard.WeatherCardWind > lUserSettings.WindMax ||
+                    weatherCard.WeatherCardPrecip > lUserSettings.PrecipMax)
                 {
-                    weatherCard.GoodRunTime = false;
+                    weatherCard.WeatherCardGoodRunTime = false;
                 }
             }
 
-            return weatherCardList;
         }
-        
-        static void PrintBestTimes(Settings userSettings, List<WeatherCardClass> weatherCardList)
-            //Function to print the best running times.
+
+
+        /*
+         * Function to print the best running times.
+         */
+        static void PrintBestTimes(ref Settings lUserSettings, ref List<WeatherCardClass> lWeatherCardList)
         {
-            Console.WriteLine("The best times to run today in " + userSettings.Location + " are:");
-            foreach (var weatherCard in weatherCardList)
+            Console.WriteLine("The best times to run today in " + lUserSettings.Location + " are:");
+            foreach (var weatherCard in lWeatherCardList)
             {
-                if (weatherCard.GoodRunTime == true)
+                if (weatherCard.WeatherCardGoodRunTime == true)
                 {
-                    Console.WriteLine(weatherCard.Time);
+                    Console.WriteLine(weatherCard.WeatherCardTime);
                 }
 
             }
