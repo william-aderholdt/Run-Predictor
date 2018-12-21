@@ -1,8 +1,0 @@
-Zipcode:92130
-Hours:1
-TempMax:80
-TempMin:25
-PrecipMax:5
-WindMax:10
-
-
