@@ -18,7 +18,7 @@ namespace runPredictor
 
         public Settings ()
         {
-            string[] settingsCapture = System.IO.File.ReadAllLines(@"F:\projects\runPredictor\runPredictor\settings.txt"); //need to update this manually for now
+            string[] settingsCapture = System.IO.File.ReadAllLines(@"F:\projects\runPredictor\runPredictor\source\settings.txt"); //need to update this manually for now
 
             ZipCode = settingsCapture[0].Substring(8);
             Int32.TryParse(settingsCapture[1].Substring(6), out Hours);
