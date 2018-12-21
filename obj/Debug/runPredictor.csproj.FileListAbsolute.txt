@@ -10,3 +10,13 @@ F:\projects\runPredictor\runPredictor\bin\Debug\HtmlAgilityPack.xml
 F:\projects\runPredictor\runPredictor\obj\Debug\runPredictor.csproj.CopyComplete
 F:\projects\runPredictor\runPredictor\bin\Debug\HtmlAgilityPack.CssSelectors.dll
 F:\projects\runPredictor\runPredictor\bin\Debug\HtmlAgilityPack.CssSelectors.pdb
+F:\projects\Run-Predictor\obj\Debug\runPredictor.csprojAssemblyReference.cache
+F:\projects\Run-Predictor\obj\Debug\runPredictor.csproj.CoreCompileInputs.cache
+F:\projects\Run-Predictor\obj\Debug\runPredictor.exe
+F:\projects\Run-Predictor\obj\Debug\runPredictor.pdb
+F:\projects\Run-Predictor\bin\Debug\runPredictor.exe.config
+F:\projects\Run-Predictor\bin\Debug\runPredictor.exe
+F:\projects\Run-Predictor\bin\Debug\runPredictor.pdb
+F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.xml
+F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.CssSelectors.pdb
+F:\projects\Run-Predictor\obj\Debug\runPredictor.csproj.CopyComplete
