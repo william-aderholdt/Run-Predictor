@@ -23,11 +23,11 @@ namespace runPredictor
 
 
         /*
-          Function makes the objects to store weather information for each point in time using information from the user settings and the
-          previously web scraped data.
+          Function makes the objects to store weather information for each point in time using information from the 
+          user settings and thepreviously web scraped data.
 
-          For Loop: Iterates through every row of data captured from weather.com's hour-by-hour forecast. Adds weather card to the list for later
-          retrieval.
+          For Loop: Iterates through every row of data captured from weather.com's hour-by-hour forecast. Adds weather 
+          card to the list for later retrieval.
 
           Return: Returns the list of weather cards created.
         */
@@ -38,8 +38,10 @@ namespace runPredictor
 
             for (int lTimeDataIndex = 0; lTimeDataIndex < lWebscrapeData.TimeData.Count(); ++lTimeDataIndex)
             {
-                WeatherCardClass weatherCard = new WeatherCardClass(lWebscrapeData.TimeData[lTimeDataIndex], lWebscrapeData.TempData[lTimeDataIndex],
-                                                                    lWebscrapeData.FeelData[lTimeDataIndex], lWebscrapeData.PrecipData[lTimeDataIndex], 
+                WeatherCardClass weatherCard = new WeatherCardClass(lWebscrapeData.TimeData[lTimeDataIndex], 
+                                                                    lWebscrapeData.TempData[lTimeDataIndex],
+                                                                    lWebscrapeData.FeelData[lTimeDataIndex], 
+                                                                    lWebscrapeData.PrecipData[lTimeDataIndex], 
                                                                     lWebscrapeData.WindData[lTimeDataIndex]);
                 lWeatherCardList.Add(weatherCard);
 

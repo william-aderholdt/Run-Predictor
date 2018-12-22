@@ -1,4 +1,4 @@
-Zipcode:58103
+Zipcode:59715
 Hours:1
 TempMax:80
 TempMin:25

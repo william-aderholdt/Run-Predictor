@@ -18,7 +18,7 @@ namespace runPredictor
 
         public Settings()
         {
-            string[] settingsCapture = System.IO.File.ReadAllLines(@"F:\projects\Run-Predictor\source\settings.txt"); //need to update this manually for now
+            string[] settingsCapture = System.IO.File.ReadAllLines(@"AppDomain.CurrentDomain.BaseDirectory\assets\settings.txt"); //need to update this manually for now
 
             this.mZipCode = settingsCapture[0].Substring(8);
             Int32.TryParse(settingsCapture[1].Substring(6), out this.mHours);
@@ -26,6 +26,11 @@ namespace runPredictor
             Int32.TryParse(settingsCapture[3].Substring(8), out this.mTempMin);
             Int32.TryParse(settingsCapture[4].Substring(10), out this.mPrecipMax);
             Int32.TryParse(settingsCapture[5].Substring(8), out this.mWindMax);
+        }
+
+        private void LoadSettings()
+        {
+
         }
 
         public string Location

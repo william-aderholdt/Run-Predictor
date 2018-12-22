@@ -38,6 +38,9 @@ namespace runPredictor
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.WriteLine("\nThe website this program is trying to reach could be down, or a 5-digit zip code needs to be placed" +
+                    " in the settings.txt file. \n\n  Press any button to close the program.");
+                Console.ReadLine();
             }
 
             this.mTimeData = doc.DocumentNode.SelectNodes("//div[@class='hourly-time']");
