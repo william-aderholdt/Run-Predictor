@@ -1,5 +1,5 @@
 Zipcode:59715
-Hours:1
+Hours:2
 TempMax:80
 TempMin:25
 PrecipMax:5

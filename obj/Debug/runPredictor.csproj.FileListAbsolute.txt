@@ -21,3 +21,5 @@ F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.xml
 F:\projects\Run-Predictor\obj\Debug\runPredictor.csproj.CopyComplete
 F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.dll
 F:\projects\Run-Predictor\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Lana\Documents\projects\runPredictor\obj\Debug\runPredictor.exe
+C:\Users\Lana\Documents\projects\runPredictor\obj\Debug\runPredictor.pdb

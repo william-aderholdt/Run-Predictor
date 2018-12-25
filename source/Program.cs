@@ -11,6 +11,7 @@ namespace runPredictor
     {
         public static void Main(string[] args)
         {
+
             List<WeatherCardClass> lWeatherCardList = new List<WeatherCardClass>();
             Settings lUserSettings = new Settings();
             WebScrape lWebscrapeData = new WebScrape(ref lUserSettings);
@@ -66,6 +67,20 @@ namespace runPredictor
                     weatherCard.WeatherCardPrecip > lUserSettings.PrecipMax)
                 {
                     weatherCard.WeatherCardGoodRunTime = false;
+                }
+            }
+
+            for (int lWeatherCardIndex = 0; lWeatherCardIndex < lWeatherCardList.Length - lUserSettings.Hours; ++lWeatherCardIndex)
+            {
+                if (lWeatherCardList[lWeatherCardIndex].WeatherCardGoodRunTime == true)
+                {
+                    for (int lWeatherCardHour = 1; lWeatherCardHour < lWeatherCardList[lWeatherCardIndex + lUserSettings.Hours]; ++lWeatherCardHour)
+                    {
+                        if (lWeatherCardList[lWeatherCardIndex + lWeatherCardHour].WeatherCardGoodRunTime != true)
+                        {
+                            lWeatherCardList[lWeatherCardIndex] = false;
+                        }
+                    }
                 }
             }
 
