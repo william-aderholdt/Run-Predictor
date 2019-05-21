@@ -1,4 +1,5 @@
-Run Predictor is a C# command line application which states which times would be best to run for the day based on the weather, given parameters set by the user.
+#Run Predictor
+Run Predictor is a C# command line application which states which times would be best to run for the day based on the weather, given parameters set by the user. It utilizes web scraping to gather weather data, and then analyzes that data to provide you with run time suggestions.
 
 The output is formatted like this:
 ![picture](/assets/img3.PNG)
